@@ -17,6 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".addAct" android:label="정보 추가" ></activity>
+        <activity android:name=".RealActivity" android:label="화면 정보" ></activity>
     </application>
 
 </manifest>

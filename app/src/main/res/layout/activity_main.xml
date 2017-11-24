@@ -48,7 +48,7 @@
                 android:gravity="center"
                 android:textSize="24sp" />
             <TextView
-                android:id="@+id/textProject"
+                android:id="@+id/textproject"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
@@ -57,7 +57,7 @@
                 android:textSize="24sp" />
 
             <TextView
-                android:id="@+id/textProgress"
+                android:id="@+id/textprogress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
