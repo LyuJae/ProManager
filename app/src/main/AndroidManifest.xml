@@ -16,6 +16,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".addAct" android:label="정보 추가" ></activity>
     </application>
 
 </manifest>
