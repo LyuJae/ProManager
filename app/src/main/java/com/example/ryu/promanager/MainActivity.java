@@ -15,7 +15,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TabHost;
 import android.widget.TextView;
-
+import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
         TextView text1, text2, text3, newTextView;
         LinearLayout Linearlayout;
+        Button btnOk, btnNo;
 
         text1 = (TextView) findViewById(R.id.Text1);
         text3 = (TextView) findViewById(R.id.Text3);
@@ -46,24 +47,45 @@ public class MainActivity extends AppCompatActivity {
 
         Linearlayout = (LinearLayout) findViewById(R.id.linearlayout);
         newTextView = new TextView(getApplicationContext());
+
+
+
         newTextView.setLayoutParams(new LinearLayout.LayoutParams
                 (LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
         Linearlayout.setOrientation(LinearLayout.VERTICAL);
-        newTextView.setGravity(Gravity.CENTER);
+        newTextView.setGravity(Gravity.LEFT);
         String ntext="프로젝트4";
         newTextView.setText(ntext);
+        newTextView.setPadding(30,0,0,0);
+
         newTextView.setTextColor(Color.parseColor("#000000"));
         newTextView.setClickable(true);
-        Linearlayout.addView(newTextView);
-
-
-
         newTextView.setOnClickListener(new View.OnClickListener(){
+            @Override
             public void onClick(View v){
+
                 Intent intent2 = new Intent(getApplicationContext(), TextAct4.class);
-               startActivity(intent2);
+                startActivity(intent2);
             }
         });
+        Linearlayout.addView(newTextView);
+
+        btnOk = new Button(this);
+        btnOk.setText("수락");
+        btnOk.setLayoutParams(new LinearLayout.LayoutParams
+                (LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+        btnOk.setGravity(Gravity.CENTER);
+        btnOk.setClickable(true);
+        btnOk.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+
+                Toast.makeText(getApplicationContext(), "수락하셨습니다.", Toast.LENGTH_SHORT).show();
+            }
+        });
+        Linearlayout.addView(btnOk);
+
+
 
         text1.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
