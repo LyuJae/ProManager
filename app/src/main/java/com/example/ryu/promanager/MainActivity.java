@@ -33,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
         EditText firstProgress = (EditText) findViewById(R.id.firstprogress);
         intent.putExtra("contact_progress", firstProgress.getText().toString());
 
-
                 startActivity(intent);
             }
         });

@@ -4,6 +4,10 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="수정하기"/>
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -12,31 +16,31 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/project"
+        android:id="@+id/Major"
+        android:hint="학과"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Stu_Number"
+        android:hint="학번"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Project"
         android:hint="프로젝트 명"/>
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/progress"
+        android:id="@+id/Progress"
         android:hint="진행 내용"/>
-    <RatingBar
-        android:id="@+id/ratingBar"
-        android:stepSize="1"
-        android:numStars="10"
-        style = "?android:attr/ratingBarStyleIndicator"/>
-    <Button
-        android:id="@+id/btnInc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="증가"/>
-    <Button
-        android:id="@+id/btnDec"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="감소"/>
     <Button
         android:id="@+id/btnSave"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:text="저장하기"/>
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="뒤로 가기"/>
 </LinearLayout>

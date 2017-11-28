@@ -16,38 +16,29 @@ public class addAct extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.add);
 
-        EditText editname, editprogress, editproject;
-        Button Btninc, Btndec, Btnsave;
-        final RatingBar rating;
-        editname = (EditText) findViewById(R.id.name);
-        editproject = (EditText) findViewById(R.id.project);
-        editprogress = (EditText) findViewById(R.id.progress);
-        Btninc = (Button) findViewById(R.id.btnInc);
-        Btndec = (Button) findViewById(R.id.btnDec);
-        rating = (RatingBar) findViewById(R.id.ratingBar);
-        Btnsave = (Button) findViewById(R.id.btnSave);
-
-
-        Btninc.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                rating.setRating(rating.getRating()+rating.getStepSize());
-            }
-        });
-
-        Btndec.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                rating.setRating(rating.getRating()-rating.getStepSize());
-            }
-        });
-
-
-            Intent intent = new Intent(addAct.this, MainActivity.class);
-
-            intent.putExtra("contact_name", editname.getText().toString());
-            intent.putExtra("contact_project", editproject.getText().toString());
-            intent.putExtra("contact_progress", editprogress.getText().toString());
+       Button Btnsave = (Button) findViewById(R.id.btnSave);
+       Button Btnback = (Button) findViewById(R.id.btnBack);
 
         Btnsave.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(addAct.this, RealActivity.class);
+
+                EditText Name = (EditText) findViewById(R.id.name);
+                intent.putExtra("contact_name", Name.getText().toString());
+                EditText major = (EditText) findViewById(R.id.Major);
+                intent.putExtra("contact_major", major.getText().toString());
+                EditText Stu_number = (EditText) findViewById(R.id.Stu_Number);
+                intent.putExtra("contact_number", Stu_number.getText().toString());
+                EditText project = (EditText) findViewById(R.id.Project);
+                intent.putExtra("contact_project", project.getText().toString());
+                EditText progress = (EditText) findViewById(R.id.Progress);
+                intent.putExtra("contact_progress", progress.getText().toString());
+
+
+                startActivity(intent);
+            }
+        });
+        Btnback.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 finish();
         }
