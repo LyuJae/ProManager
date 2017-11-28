@@ -16,8 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".addAct" android:label="정보 추가" ></activity>
-        <activity android:name=".RealActivity" android:label="화면 정보" ></activity>
+        <activity android:name=".TextAct" android:label="프로젝트 1번" ></activity>
+        <activity android:name=".TextAct2" android:label="프로젝트 2번" ></activity>
+        <activity android:name=".TextAct3" android:label="프로젝트 3번" ></activity>
     </application>
 
 </manifest>
