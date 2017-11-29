@@ -4,26 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    tools:context="com.example.ryu.promanager.MainActivity"
-    >
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="조별과제 어플리케이션입니다."
-        android:gravity="center"
-        />
+    tools:context="com.example.ryu.promanager.MainActivity">
 
-    <TabHost android:id="@+id/tabHost1"
+
+    <TabHost
+        android:id="@+id/tabHost1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="bottom"
-        android:padding="8dp"
-        android:layout_margin="10dp">
+        android:layout_margin="10dp"
+        android:padding="8dp">
+
+
+
         <LinearLayout
+            android:id="@+id/linearlayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:id="@+id/linearlayout">
+            android:orientation="vertical">
 
             <TabWidget
                 android:id="@android:id/tabs"
@@ -35,53 +33,30 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <!-- 첫 번째 페이지. content1 -->
-                <LinearLayout android:id="@+id/content1"
+                <LinearLayout
+                    android:id="@+id/projecttab"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:padding="8dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="#8BC34A"
-                        android:gravity="left"
-                        android:padding="8dp"
-                        android:layout_margin="10dp"
-                        android:id="@+id/Text1"
-                        android:text="프로젝트 1"
-                        android:clickable="true"
-                        />
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="#8Bf34A"
-                        android:gravity="left"
-                        android:padding="8dp"
-                        android:layout_margin="10dp"
-                        android:id="@+id/Text2"
-                        android:text="프로젝트 2" />
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="#EEf34A"
-                        android:gravity="left"
-                        android:padding="8dp"
-                        android:layout_margin="10dp"
-                        android:id="@+id/Text3"
-                        android:text="프로젝트 3" />
+
+
+
                     <LinearLayout
+                        android:id="@+id/project_content"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:id="@+id/Linearlayout"/>
+                        android:orientation="vertical" />
                 </LinearLayout>
+
                 <!-- 두 번째 페이지. content2 -->
                 <LinearLayout
-                    android:id="@+id/content2"
+                    android:id="@+id/datetab"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:padding="8dp">
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -89,6 +64,12 @@
                         android:gravity="center"
                         android:padding="8dp"
                         android:text="TAB CONTENT 2" />
+
+                    <LinearLayout
+                        android:id="@+id/date_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
                 </LinearLayout>
 
             </FrameLayout>
